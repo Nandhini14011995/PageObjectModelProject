@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Print-OnDemand Application Automation Suite"
+	verbose="1">
+
+	<listeners>
+		<listener class-name="com.crm.qa.ExtentReportListener.ExtentReporterNG"></listener>		
+	</listeners>
+
+
+	<test name="Print-OnDemand Application Automation Test">
+		<classes>
+			<class name="com.crm.qa.testcases.LoginPageTest" />
+			<class name="com.crm.qa.testcases.HomePageTest" />
+			<class name="com.crm.qa.testcases.PrintProductsPageTest" />
+		</classes>
+
+	</test>
+</suite>

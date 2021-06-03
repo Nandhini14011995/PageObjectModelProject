@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Print-OnDemand Application Automation Suite]">
+  <listeners>
+    <listener class-name="com.crm.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Print-OnDemand Application Automation Test(failed)">
+    <classes>
+      <class name="com.crm.qa.testcases.PrintProductsPageTest">
+        <methods>
+          <include name="UploadFileTest"/>
+          <include name="documentCategoryTest"/>
+          <include name="setUp"/>
+          <include name="printProductsPageTitleTest"/>
+          <include name="tearDown"/>
+          <include name="headerTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.PrintProductsPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="printReadyTest"/>
+          <include name="avatarTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Print-OnDemand Application Automation Test(failed) -->
+</suite> <!-- Failed suite [Print-OnDemand Application Automation Suite] -->
