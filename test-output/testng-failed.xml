@@ -6,24 +6,13 @@
   </listeners>
   <test thread-count="5" name="Print-OnDemand Application Automation Test(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.PrintProductsPageTest">
+      <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
-          <include name="UploadFileTest"/>
-          <include name="documentCategoryTest"/>
           <include name="setUp"/>
-          <include name="printProductsPageTitleTest"/>
+          <include name="loginTest" invocation-numbers="0 1"/>
           <include name="tearDown"/>
-          <include name="headerTest"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.PrintProductsPageTest -->
-      <class name="com.crm.qa.testcases.HomePageTest">
-        <methods>
-          <include name="printReadyTest"/>
-          <include name="avatarTest"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.HomePageTest -->
+      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Print-OnDemand Application Automation Test(failed) -->
 </suite> <!-- Failed suite [Print-OnDemand Application Automation Suite] -->

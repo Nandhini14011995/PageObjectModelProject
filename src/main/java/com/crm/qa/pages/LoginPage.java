@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.TestUtil;
 
 
 public class LoginPage extends TestBase{
@@ -17,7 +18,7 @@ public class LoginPage extends TestBase{
 	 * it will not interact with findBy to find the webelement overtime as it has already stored the webelement in memory
 	 * So this approach will improve the performance of the code.
 	 */
-	
+	TestUtil testutil;
 	
 	@FindBy(xpath="//span[text()='Sign Up or Log In']")
 	@CacheLookup
@@ -48,6 +49,8 @@ public class LoginPage extends TestBase{
 	}
 	
 	public HomePage validateLogin(String us, String Pwd) throws InterruptedException{
+		testutil= new TestUtil();
+		testutil.mouseEventFiring(login);
 		login.click();
 		username_Input.sendKeys(us);
 		password_Input.sendKeys(Pwd);
