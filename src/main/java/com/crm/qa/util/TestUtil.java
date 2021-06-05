@@ -15,6 +15,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Coordinates;
+import org.openqa.selenium.interactions.Locatable;
+import org.openqa.selenium.support.events.internal.EventFiringMouse;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -25,8 +29,8 @@ public class TestUtil extends TestBase{
 
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 10;
-	public static String SHEET_PATH = "C:\\\\Users\\\\nandh\\\\eclipse-workspace\\\\SeleniumInterviewPreparation\\\\DataProvider.xlsx";
-	
+	public static String SHEET_PATH = "C:\\Users\\nandh\\eclipse-workspace\\PageObjectModelProject\\src\\main\\java\\com\\crm\\qa\\testdata\\DataProvider.xlsx";
+	public static EventFiringMouse  emouse;
 	
 	private XSSFWorkbook wb;
 	private XSSFSheet sh;
@@ -103,6 +107,16 @@ public class TestUtil extends TestBase{
 		}
 	
 	
+	public void mouseEventFiring(WebElement element) {
+		emouse = new EventFiringMouse(driver, eventListener);
+		Locatable hoveritem = (Locatable) element;
+		Coordinates cord = hoveritem.getCoordinates();
+		try {
+			emouse.mouseMove(cord);
+		} catch(Exception e) {
+			
+		}
+	}
 	
 }
 
